@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mode PUBLIC
+		"-//NetBeans//DTD Mode Properties 2.4//EN"
+		"http://www.netbeans.org/dtds/mode-properties2_4.dtd">
+<mode version="2.4">
+	<name unique="riscvSimulator"/>
+	<kind type="view"/>
+	<state type="joined"/>
+	<constraints>
+		<path orientation="vertical" number="20" weight="0.5"/>
+		<path orientation="horizontal" number="20" weight="0.22"/>
+		<path orientation="vertical" number="80" weight="0.48"/>
+	</constraints>
+	<bounds x="0" y="0" width="280" height="420"/>
+	<frame state="0"/>
+	<empty-behavior permanent="true"/>
+</mode>

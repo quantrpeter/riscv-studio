@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mode PUBLIC
+		"-//NetBeans//DTD Mode Properties 2.4//EN"
+		"http://www.netbeans.org/dtds/mode-properties2_4.dtd">
+<mode version="2.4">
+	<name unique="riscvTextSegment"/>
+	<kind type="view"/>
+	<state type="joined"/>
+	<constraints>
+		<path orientation="vertical" number="20" weight="0.5"/>
+		<path orientation="horizontal" number="80" weight="0.38"/>
+		<path orientation="vertical" number="20" weight="0.36"/>
+	</constraints>
+	<bounds x="0" y="0" width="560" height="240"/>
+	<frame state="0"/>
+	<empty-behavior permanent="true"/>
+</mode>
