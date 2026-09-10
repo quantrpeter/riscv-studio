@@ -3,8 +3,11 @@ package hk.quantr.riscvstudio.ui;
 import hk.quantr.riscvstudio.DummySimulation;
 import hk.quantr.riscvstudio.DummySimulation.Breakpoint;
 import javax.swing.DefaultListModel;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.ListSelectionModel;
+import javax.swing.SwingConstants;
+import org.openide.util.ImageUtilities;
 
 public class SimulatorPanel extends JPanel {
 
@@ -13,6 +16,7 @@ public class SimulatorPanel extends JPanel {
 
 	public SimulatorPanel() {
 		initComponents();
+		applyActionIcons();
 		breakpointList.setFont(UiDefaults.mono());
 		breakpointList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		outputArea.setFont(UiDefaults.mono());
@@ -32,6 +36,24 @@ public class SimulatorPanel extends JPanel {
 		speedSlider.setValue(simulation.getSpeed());
 		runButton.setEnabled(!simulation.isRunning() && !simulation.isHalted());
 		pauseButton.setEnabled(simulation.isRunning());
+	}
+
+	private void applyActionIcons() {
+		icon(assembleButton, "assemble.png");
+		icon(resetButton, "reset.png");
+		icon(runButton, "run.png");
+		icon(pauseButton, "pause.png");
+		icon(stepIntoButton, "stepInto.png");
+		icon(stepOverButton, "stepOver.png");
+		icon(stepOutButton, "stepOut.png");
+		icon(addBreakpointButton, "add.png");
+		icon(removeBreakpointButton, "remove.png");
+		icon(clearButton, "clear.png");
+	}
+
+	private static void icon(JButton button, String file) {
+		button.setIcon(ImageUtilities.loadImageIcon("hk/quantr/riscvstudio/action/" + file, true));
+		button.setHorizontalAlignment(SwingConstants.LEADING);
 	}
 
 	/**

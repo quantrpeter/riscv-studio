@@ -17,7 +17,7 @@ import org.openide.util.actions.Presenter;
 public final class SimulatorActions {
 
 	@ActionID(category = "RISC-V", id = "hk.quantr.riscvstudio.action.Assemble")
-	@ActionRegistration(displayName = "Assemble")
+	@ActionRegistration(displayName = "Assemble", iconBase = "hk/quantr/riscvstudio/action/assemble.png")
 	@ActionReferences({
 		@ActionReference(path = "Menu/RISC-V", position = 100),
 		@ActionReference(path = "Toolbars/RISC-V", position = 100)
@@ -31,7 +31,7 @@ public final class SimulatorActions {
 	}
 
 	@ActionID(category = "RISC-V", id = "hk.quantr.riscvstudio.action.Reset")
-	@ActionRegistration(displayName = "Reset")
+	@ActionRegistration(displayName = "Reset", iconBase = "hk/quantr/riscvstudio/action/reset.png")
 	@ActionReferences({
 		@ActionReference(path = "Menu/RISC-V", position = 200),
 		@ActionReference(path = "Toolbars/RISC-V", position = 200)
@@ -45,7 +45,7 @@ public final class SimulatorActions {
 	}
 
 	@ActionID(category = "RISC-V", id = "hk.quantr.riscvstudio.action.Run")
-	@ActionRegistration(displayName = "Run")
+	@ActionRegistration(displayName = "Run", iconBase = "hk/quantr/riscvstudio/action/run.png")
 	@ActionReferences({
 		@ActionReference(path = "Menu/RISC-V", position = 300),
 		@ActionReference(path = "Toolbars/RISC-V", position = 300)
@@ -59,7 +59,7 @@ public final class SimulatorActions {
 	}
 
 	@ActionID(category = "RISC-V", id = "hk.quantr.riscvstudio.action.Pause")
-	@ActionRegistration(displayName = "Pause")
+	@ActionRegistration(displayName = "Pause", iconBase = "hk/quantr/riscvstudio/action/pause.png")
 	@ActionReferences({
 		@ActionReference(path = "Menu/RISC-V", position = 400),
 		@ActionReference(path = "Toolbars/RISC-V", position = 400)
@@ -73,7 +73,7 @@ public final class SimulatorActions {
 	}
 
 	@ActionID(category = "RISC-V", id = "hk.quantr.riscvstudio.action.StepInto")
-	@ActionRegistration(displayName = "Step Into")
+	@ActionRegistration(displayName = "Step Into", iconBase = "hk/quantr/riscvstudio/action/stepInto.png")
 	@ActionReferences({
 		@ActionReference(path = "Menu/RISC-V", position = 500),
 		@ActionReference(path = "Toolbars/RISC-V", position = 500)
@@ -87,7 +87,7 @@ public final class SimulatorActions {
 	}
 
 	@ActionID(category = "RISC-V", id = "hk.quantr.riscvstudio.action.StepOver")
-	@ActionRegistration(displayName = "Step Over")
+	@ActionRegistration(displayName = "Step Over", iconBase = "hk/quantr/riscvstudio/action/stepOver.png")
 	@ActionReferences({
 		@ActionReference(path = "Menu/RISC-V", position = 600),
 		@ActionReference(path = "Toolbars/RISC-V", position = 600)
@@ -101,7 +101,7 @@ public final class SimulatorActions {
 	}
 
 	@ActionID(category = "RISC-V", id = "hk.quantr.riscvstudio.action.StepOut")
-	@ActionRegistration(displayName = "Step Out")
+	@ActionRegistration(displayName = "Step Out", iconBase = "hk/quantr/riscvstudio/action/stepOut.png")
 	@ActionReferences({
 		@ActionReference(path = "Menu/RISC-V", position = 700),
 		@ActionReference(path = "Toolbars/RISC-V", position = 700)

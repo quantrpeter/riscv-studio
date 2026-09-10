@@ -33,22 +33,22 @@
 	</folder>
 	<folder name="Templates">
 		<folder name="Project">
-			<folder name="RISC-V">
-				<attr name="displayName" bundlevalue="hk.quantr.riscvstudio.Bundle#Templates/Project/RISC-V"/>
-				<attr name="position" intvalue="80"/>
-			</folder>
+				<folder name="RISC-V">
+						<attr name="displayName" bundlevalue="hk.quantr.riscvstudio.Bundle#Templates/Project/RISC-V"/>
+						<attr name="position" intvalue="80"/>
+				</folder>
 		</folder>
 		<folder name="RISC-V">
-			<attr name="displayName" bundlevalue="hk.quantr.riscvstudio.Bundle#Templates/RISC-V"/>
-			<attr name="position" intvalue="80"/>
-			<file name="AssemblyFile.asm" url="templates/AssemblyFile.asm">
-				<attr name="template" boolvalue="true"/>
-				<attr name="displayName" bundlevalue="hk.quantr.riscvstudio.Bundle#Templates/RISC-V/AssemblyFile"/>
-				<attr name="templateWizardURL" urlvalue="nbresloc:/hk/quantr/riscvstudio/templates/AssemblyFile.html"/>
-				<attr name="iconBase" stringvalue="hk/quantr/riscvstudio/project/riscv.png"/>
-				<attr name="requireProject" boolvalue="false"/>
-				<attr name="position" intvalue="100"/>
-			</file>
+				<attr name="displayName" bundlevalue="hk.quantr.riscvstudio.Bundle#Templates/RISC-V"/>
+				<attr name="position" intvalue="80"/>
+				<file name="AssemblyFile.asm" url="templates/AssemblyFile.asm">
+						<attr name="template" boolvalue="true"/>
+						<attr name="displayName" bundlevalue="hk.quantr.riscvstudio.Bundle#Templates/RISC-V/AssemblyFile"/>
+						<attr name="templateWizardURL" urlvalue="nbresloc:/hk/quantr/riscvstudio/templates/AssemblyFile.html"/>
+						<attr name="iconBase" stringvalue="hk/quantr/riscvstudio/project/riscv.png"/>
+						<attr name="requireProject" boolvalue="false"/>
+						<attr name="position" intvalue="100"/>
+				</file>
 		</folder>
 	</folder>
 </filesystem>
