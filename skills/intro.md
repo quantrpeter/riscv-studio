@@ -1,0 +1,1 @@
+riscv-studio is netbeans module, convert netbeans into risc-v IDE. It use quantr toolchain, including quantr risc-v assembler to compile the source code, and riscv-simulator to run the program.
