@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Setting>
+	<registers>
+		<Register>
+			<name>sp</name>
+			<value>0xfffff0</value>
+		</Register>
+	</registers>
+	<memoryMaps>
+		<MemoryMap>
+			<name>RAM</name>
+			<start>0x0</start>
+			<size>16777216</size>
+		</MemoryMap>
+	</memoryMaps>
+	<memory/>
+	<fireInterrupts/>
+	<memoryHiJacks/>
+</Setting>

@@ -45,10 +45,31 @@
 						<attr name="template" boolvalue="true"/>
 						<attr name="displayName" bundlevalue="hk.quantr.riscvstudio.Bundle#Templates/RISC-V/AssemblyFile"/>
 						<attr name="templateWizardURL" urlvalue="nbresloc:/hk/quantr/riscvstudio/templates/AssemblyFile.html"/>
-						<attr name="iconBase" stringvalue="hk/quantr/riscvstudio/project/riscv.png"/>
+						<attr name="iconBase" stringvalue="hk/quantr/riscvstudio/asm/asm.png"/>
 						<attr name="requireProject" boolvalue="false"/>
 						<attr name="position" intvalue="100"/>
 				</file>
+		</folder>
+	</folder>
+	<folder name="Editors">
+		<folder name="text">
+			<folder name="x-riscv-asm">
+				<attr name="displayName" bundlevalue="hk.quantr.riscvstudio.Bundle#Editors/text/x-riscv-asm"/>
+				<file name="org-netbeans-modules-editor-NbEditorKit.instance"/>
+				<folder name="FontsAndColors">
+					<folder name="NetBeans">
+						<file name="defaults.xml" url="asm/FontAndColors.xml"/>
+					</folder>
+				</folder>
+			</folder>
+		</folder>
+	</folder>
+	<folder name="Loaders">
+		<folder name="text">
+			<folder name="x-riscv-asm">
+				<attr name="SystemFileSystem.icon" urlvalue="nbresloc:/hk/quantr/riscvstudio/asm/asm.png"/>
+				<attr name="displayName" bundlevalue="hk.quantr.riscvstudio.Bundle#Loaders/text/x-riscv-asm"/>
+			</folder>
 		</folder>
 	</folder>
 </filesystem>

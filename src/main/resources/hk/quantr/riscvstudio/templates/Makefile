@@ -27,6 +27,7 @@ ELF            := $(BUILD_DIR)/$(TARGET).elf
 LST            := $(BUILD_DIR)/$(TARGET).lst
 
 START          ?= 0x0
+SETTING        ?= setting.xml
 SIM_COMMANDS   ?= c
 
 .PHONY: all compile run run-elf debug clean help
@@ -51,15 +52,18 @@ $(ELF): $(SRC) | $(BUILD_DIR)
 
 run: $(BIN)
 	@test -n "$(SIMULATOR_JAR)" -a -f "$(SIMULATOR_JAR)" || { echo "riscv-simulator jar not found. Build $(SIMULATOR_HOME) or set SIMULATOR_JAR"; exit 1; }
-	$(SIMULATOR) --binary "$(BIN)" -s $(START) --commands "$(SIM_COMMANDS)"
+	@test -f "$(SETTING)" || { echo "missing $(SETTING) (simulator init file)"; exit 1; }
+	$(SIMULATOR) --init "$(SETTING)" --binary "$(BIN),$(START)" -s $(START) --commands "$(SIM_COMMANDS)"
 
 run-elf: $(ELF)
 	@test -n "$(SIMULATOR_JAR)" -a -f "$(SIMULATOR_JAR)" || { echo "riscv-simulator jar not found. Build $(SIMULATOR_HOME) or set SIMULATOR_JAR"; exit 1; }
-	$(SIMULATOR) --elf "$(ELF)" -s $(START) --commands "$(SIM_COMMANDS)"
+	@test -f "$(SETTING)" || { echo "missing $(SETTING) (simulator init file)"; exit 1; }
+	$(SIMULATOR) --init "$(SETTING)" --elf "$(ELF)" -s $(START) --commands "$(SIM_COMMANDS)"
 
 debug: $(BIN)
 	@test -n "$(SIMULATOR_JAR)" -a -f "$(SIMULATOR_JAR)" || { echo "riscv-simulator jar not found. Build $(SIMULATOR_HOME) or set SIMULATOR_JAR"; exit 1; }
-	$(SIMULATOR) --binary "$(BIN)" -s $(START)
+	@test -f "$(SETTING)" || { echo "missing $(SETTING) (simulator init file)"; exit 1; }
+	$(SIMULATOR) --init "$(SETTING)" --binary "$(BIN),$(START)" -s $(START)
 
 clean:
 	rm -rf "$(BUILD_DIR)"
@@ -71,4 +75,4 @@ help:
 	@echo "make debug     assemble and open the simulator prompt"
 	@echo "make clean     remove $(BUILD_DIR)"
 	@echo
-	@echo "Override ASSEMBLER_JAR, SIMULATOR_JAR, ARCH, SRC, START, SIM_COMMANDS as needed."
+	@echo "Override ASSEMBLER_JAR, SIMULATOR_JAR, ARCH, SRC, START, SETTING, SIM_COMMANDS as needed."

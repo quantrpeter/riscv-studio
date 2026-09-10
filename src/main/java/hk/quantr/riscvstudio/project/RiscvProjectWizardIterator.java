@@ -66,6 +66,7 @@ public final class RiscvProjectWizardIterator implements WizardDescriptor.Instan
 		FileUtil.createFolder(dir, RiscvProject.LIB_DIR);
 		write(dir, RiscvProject.SRC_DIR + "/riscv1.asm", sampleAssembly(name));
 		write(dir, "Makefile", makefileTemplate());
+		write(dir, "setting.xml", settingTemplate());
 	}
 
 	private static void write(FileObject dir, String relativePath, String content) throws IOException {
@@ -113,10 +114,18 @@ public final class RiscvProjectWizardIterator implements WizardDescriptor.Instan
 	}
 
 	private static String makefileTemplate() throws IOException {
+		return resource("Makefile");
+	}
+
+	private static String settingTemplate() throws IOException {
+		return resource("setting.xml");
+	}
+
+	private static String resource(String name) throws IOException {
 		try (InputStream in = RiscvProjectWizardIterator.class.getResourceAsStream(
-				"/hk/quantr/riscvstudio/templates/Makefile")) {
+				"/hk/quantr/riscvstudio/templates/" + name)) {
 			if (in == null) {
-				throw new IOException("Makefile template not found");
+				throw new IOException(name + " template not found");
 			}
 			return new String(in.readAllBytes(), StandardCharsets.UTF_8);
 		}

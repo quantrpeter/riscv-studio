@@ -99,6 +99,10 @@ public class RiscvLogicalView implements LogicalViewProvider {
 			if (makefile != null && makefile.isData()) {
 				keys.add(new FolderKey(makefile, "Makefile"));
 			}
+			FileObject setting = project.getProjectDirectory().getFileObject("setting.xml");
+			if (setting != null && setting.isData()) {
+				keys.add(new FolderKey(setting, "setting.xml"));
+			}
 			setKeys(keys);
 		}
 
